@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".90"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".10"
+        />
+
+
+    <ImageView
+        android:id="@+id/img_Green"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo_green_flag"
+        app:layout_constraintEnd_toEndOf="@id/guide_last"
+        app:layout_constraintStart_toStartOf="@id/guide_first"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        />
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="GreenFlag customers can \n create an account to access"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide_last"
+        app:layout_constraintStart_toStartOf="@id/guide_first"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car Health updates"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_intro"
+        app:layout_constraintEnd_toEndOf="@id/guide_last"
+        app:layout_constraintStart_toStartOf="@id/guide_first"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/tick"
+        android:drawablePadding="10dp"
+        android:layout_marginRight="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request a rescue online"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_1"
+        app:layout_constraintEnd_toEndOf="@id/tv_1"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/tick"
+        android:drawablePadding="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Policy information"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_2"
+        app:layout_constraintEnd_toEndOf="@id/tv_2"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/tick"
+        android:drawablePadding="10dp"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/button_1"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Create an account"
+        app:layout_constraintTop_toBottomOf="@id/tv_3"
+        app:layout_constraintEnd_toEndOf="@id/tv_3"
+        app:layout_constraintStart_toStartOf="@id/tv_3"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/gradient_button_background"
+
+        />
+</android.support.constraint.ConstraintLayout>

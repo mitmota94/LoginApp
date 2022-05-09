@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SecondActivity">
+
+
+    <LinearLayout
+        android:layout_height="70dp"
+        android:layout_width="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+           android:id="@+id/iv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_gravity="center"
+            android:clickable="true"
+
+            />
+        <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Create an account"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="90dp" />
+
+
+
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_first_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_last_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".90"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_top_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".10"
+        />
+
+    <TextView
+        android:id="@+id/email_address_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/guide_top_2"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        android:textColor="@color/white"
+        android:paddingLeft="10dp"
+        android:text="Email Adrress"/>
+
+   <!--  <TextView
+        android:id="@+id/tv_wrongEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        app:layout_constraintTop_toBottomOf="@id/et_1"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:text="An account already exists\n for this email address"
+        android:textColor="@color/white"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/cross"
+        /> -->
+
+    <EditText
+        android:id="@+id/et_1"
+        android:layout_width="0dp"
+        android:layout_height="40sp"
+        app:layout_constraintTop_toBottomOf="@id/email_address_label"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        android:background="@color/white"
+        android:drawableRight="@drawable/tick"
+
+
+        />
+
+    <TextView
+        android:id="@+id/email_address_label2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_1"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        android:textColor="@color/white"
+        android:paddingLeft="10dp"
+        android:text="Create password"/>
+
+    <EditText
+        android:id="@+id/et_2"
+        android:layout_width="0dp"
+        android:layout_height="40sp"
+        app:layout_constraintTop_toBottomOf="@id/email_address_label2"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        android:background="@color/white"
+        android:hint="See Criteria below"
+        android:drawableRight="@drawable/tick"
+
+        />
+
+    <TextView
+        android:id="@+id/email_address_label3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_2"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        android:textColor="@color/white"
+        android:paddingLeft="10dp"
+        android:text="Repeat password"/>
+
+    <EditText
+        android:id="@+id/et_3"
+        android:layout_width="0dp"
+        android:layout_height="40sp"
+        app:layout_constraintTop_toBottomOf="@id/email_address_label3"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        android:background="@color/white"
+        android:drawableRight="@drawable/tick"
+
+        />
+
+        <TextView
+            android:id="@+id/tv_wrongPass_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/guide_first_2"
+            app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+            app:layout_constraintTop_toBottomOf="@id/et_3"
+            android:layout_marginTop="15dp"
+            android:text="Your passwords don't\n match"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:drawablePadding="20dp"
+            android:drawableLeft="@drawable/cross_2"
+            />
+    <TextView
+        android:id="@+id/tv_wrongPass_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        app:layout_constraintTop_toBottomOf="@id/et_3"
+        android:layout_marginTop="15dp"
+        android:text="One of the passwords you\n entered wasn't valid"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/cross_3"
+        />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Your password should have a minimum of 8 characters and contain at least one number, one uppercase and one lower case letter.You ca use special characters."
+        app:layout_constraintTop_toBottomOf="@id/et_3"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="20dp"
+
+        />
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnNext_1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Next"
+        android:enabled="false"
+        android:layout_marginTop="70dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_4"
+        app:layout_constraintStart_toStartOf="@id/guide_first_2"
+        app:layout_constraintEnd_toEndOf="@id/guide_last_2"
+        android:background="@drawable/gradient_button_background"
+
+        />
+</android.support.constraint.ConstraintLayout>
